@@ -1,23 +1,19 @@
-import logo from "./logo.svg";
 import "./App.css";
+import "./scores";
+import AllHighScores from "./AllHighScores";
+import allCountryScores from "./scores";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <section className="scores-section">
+        <div className="scores-container">
+          <div className="scores-title">
+            <p>High Scores per Country</p>
+          </div>
+          <AllHighScores allCountryScores={allCountryScores} />
+        </div>
+      </section>
     </div>
   );
 }

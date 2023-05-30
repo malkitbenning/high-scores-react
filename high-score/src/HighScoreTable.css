@@ -1,0 +1,11 @@
+.high-score-table {
+    border: 1rem solid #A4EB32;
+    margin: 1rem;
+    padding: 1rem;
+    min-height: 10px;
+}
+
+.country-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

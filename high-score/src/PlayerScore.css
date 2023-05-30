@@ -1,0 +1,16 @@
+.player-row {
+    border: 2px solid black;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: right;
+}
+
+.player-name {
+    color: black;
+    font-size: small;
+}
+
+.player-score {
+    color: #A52A2A;
+}
