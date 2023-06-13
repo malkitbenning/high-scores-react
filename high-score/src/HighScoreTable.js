@@ -3,8 +3,7 @@ import "./HighScoreTable.css";
 import ScoresBlock from "./ScoresBlock";
 
 const HighScoreTable = (props) => {
-
-  function compare(a, b) {
+  function compareDescending(a, b) {
     if (a.s > b.s) {
       return -1;
     }
@@ -13,8 +12,21 @@ const HighScoreTable = (props) => {
     }
     return 0;
   }
+  function compareAscending(a, b) {
+    if (a.s < b.s) {
+      return -1;
+    }
+    if (a.s > b.s) {
+      return 1;
+    }
+    return 0;
+  }
 
-  props.aCountryScores.scores.sort(compare);
+  if (props.sortOrder === "ascending") {
+    props.aCountryScores.scores.sort(compareAscending);
+  } else {
+    props.aCountryScores.scores.sort(compareDescending);
+  }
 
   return (
     <div className="high-score-table">

@@ -5,8 +5,8 @@ const ScoresBlock = (props) => {
   return (
     <div className="player-score-table">
       <div>
-        {props.playersScores.map((aScore) => (
-          <PlayerScore aScore={aScore} />
+        {props.playersScores.map((aScore, index) => (
+          <PlayerScore aScore={aScore} key={index} />
         ))}
       </div>
     </div>

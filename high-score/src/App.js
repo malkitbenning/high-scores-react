@@ -1,10 +1,10 @@
+import React, { useState } from "react";
 import "./App.css";
 import "./scores";
 import AllHighScores from "./AllHighScores";
 import allCountryScores from "./scores";
 
 function App() {
-
   function compare(a, b) {
     if (a.name < b.name) {
       return -1;
@@ -17,15 +17,28 @@ function App() {
 
   allCountryScores.sort(compare);
 
+  const [sortOrder, setSortOrder] = useState("ascending");
+
+  function toggleOrder() {
+    if (sortOrder === "ascending") {
+      setSortOrder("descending");
+    } else {
+      setSortOrder("ascending");
+    }
+  }
 
   return (
     <div className="App">
+      <button onClick={toggleOrder}>Sort {sortOrder} </button>
       <section className="scores-section">
         <div className="scores-container">
           <div className="scores-title">
             <p>High Scores per Country</p>
           </div>
-          <AllHighScores allCountryScores={allCountryScores} />
+          <AllHighScores
+            allCountryScores={allCountryScores}
+            sortOrder={sortOrder}
+          />
         </div>
       </section>
     </div>
