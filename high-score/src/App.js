@@ -29,7 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={toggleOrder}>Sort {sortOrder} </button>
+      <button className="toggle-button" onClick={toggleOrder}>
+        Sort {sortOrder}{" "}
+      </button>
       <section className="scores-section">
         <div className="scores-container">
           <div className="scores-title">

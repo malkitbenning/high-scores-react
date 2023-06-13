@@ -13,3 +13,8 @@
 .scores-title {
   font-size: 1.25rem;
 }
+
+.toggle-button {
+  font-size: 1.25rem;
+  padding: 3px;
+}
