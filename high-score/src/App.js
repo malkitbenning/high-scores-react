@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import "./scores";
+import GlobalHighScores from "./GlobalHighScores";
 import AllHighScores from "./AllHighScores";
 import allCountryScores from "./scores";
 
@@ -29,6 +30,14 @@ function App() {
 
   return (
     <div className="App">
+      <section className="scores-section">
+        <div className="scores-container">
+          <div className="scores-title">
+            <p>Overall High Scores</p>
+          </div>
+          <GlobalHighScores allCountryScores={allCountryScores} />
+        </div>
+      </section>
       <button className="toggle-button" onClick={toggleOrder}>
         Sort {sortOrder}{" "}
       </button>
